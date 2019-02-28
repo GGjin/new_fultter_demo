@@ -20,10 +20,31 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MessageForm(),
+      home: ContainerWidget(),
     );
   }
 }
+
+class ContainerWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(
+        child: Text("Container"),
+      ) ,
+      padding: EdgeInsets.all(16),
+      margin: EdgeInsets.all(20),
+      width: 80,
+      decoration:BoxDecoration(
+        color: Colors.orange,
+        borderRadius: BorderRadius.circular(5)
+      ),
+    );
+  }
+
+}
+
+
 
 class TestWidget extends StatelessWidget {
   @override
