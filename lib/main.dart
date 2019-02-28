@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ContainerWidget(),
+      home: RowWidget(),
     );
   }
 }
@@ -39,6 +39,41 @@ class ContainerWidget extends StatelessWidget{
         color: Colors.orange,
         borderRadius: BorderRadius.circular(5)
       ),
+    );
+  }
+
+}
+
+
+class RowWidget extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Row(
+      children: <Widget>[
+        Text("aaa"),
+        Text("bbb"),
+        Text("ddd"),
+        ColumnWidget()
+      ],
+    );
+  }
+
+}
+
+
+class ColumnWidget extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Text("aaa"),
+        Text("bbb"),
+        Text("ccc"),
+        Text("ddd"),
+        Text("eee"),
+      ],
     );
   }
 
